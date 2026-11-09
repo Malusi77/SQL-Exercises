@@ -1,6 +1,5 @@
-# SQL-E# SQL Basic Query Theory and Fundamentals
-
-## 📌 Project Overview
+SQL Basic Query Theory and Fundamentals
+ 📌 Project Overview
 
 Welcome to my SQL Fundamentals project!
 
@@ -8,7 +7,7 @@ This repository demonstrates my understanding of **Structured Query Language (SQ
 
 The project focuses on basic SQL query theory, essential SQL commands, database manipulation, and practical query examples. It serves as a foundation for developing database management and data analysis skills.
 
-## 🎯 Project Objectives
+ 🎯 Project Objectives
 
 - Understand the fundamentals of relational databases.
 - Learn how to retrieve data using SQL queries.
@@ -18,7 +17,7 @@ The project focuses on basic SQL query theory, essential SQL commands, database 
 - Manipulate and manage database records.
 - Develop practical SQL skills for data analytics.
 
-## 🗄️ 1. Introduction to SQL
+🗄️ 1. Introduction to SQL
 
 SQL stands for **Structured Query Language**. It is a programming language used to communicate with relational database management systems (RDBMS).
 
@@ -30,7 +29,7 @@ SQL allows users to:
 - Delete records.
 - Analyse data using aggregate functions.
 
-### What is a Relational Database?
+What is a Relational Database?
 
 A relational database stores information in structured tables consisting of rows and columns.
 
@@ -43,9 +42,9 @@ A relational database stores information in structured tables consisting of rows
 | Primary Key | A unique identifier for each record. |
 | Foreign Key | A field that links one table to another. |
 
-## 🔍 2. Basic SQL Queries
+🔍 2. Basic SQL Queries
 
-### SELECT Statement
+SELECT Statement
 
 The SELECT statement retrieves data from a database table.
 
@@ -61,7 +60,7 @@ SELECT CustomerName, City
 FROM Customers;
 ```
 
-### DISTINCT Statement
+DISTINCT Statement
 
 DISTINCT removes duplicate values from query results.
 
@@ -70,7 +69,7 @@ SELECT DISTINCT Country
 FROM Customers;
 ```
 
-### WHERE Clause
+WHERE Clause
 
 The WHERE clause filters records based on specified conditions.
 
@@ -80,7 +79,7 @@ FROM Customers
 WHERE Country = 'South Africa';
 ```
 
-### ORDER BY Clause
+ORDER BY Clause
 
 ORDER BY sorts query results in ascending or descending order.
 
@@ -98,7 +97,7 @@ FROM Customers
 ORDER BY CustomerName DESC;
 ```
 
-### LIMIT Clause
+LIMIT Clause
 
 LIMIT restricts the number of records returned.
 
@@ -110,7 +109,7 @@ LIMIT 5;
 
 *Note: SQL Server uses TOP instead of LIMIT, while other database systems have their own syntax variations.*
 
-## ⚙️ 3. SQL Operators
+⚙️ 3. SQL Operators
 
 SQL operators help filter and compare data.
 
@@ -129,7 +128,7 @@ SQL operators help filter and compare data.
 | IN | Matches values in a specified list |
 | LIKE | Searches for a specified pattern |
 
-### Practical Examples
+Practical Examples
 
 **AND Operator**
 
@@ -173,7 +172,7 @@ FROM Customers
 WHERE CustomerName LIKE 'A%';
 ```
 
-## 📊 4. Aggregate Functions
+📊 4. Aggregate Functions
 
 Aggregate functions perform calculations on multiple records and return a single result.
 
@@ -185,7 +184,7 @@ Aggregate functions perform calculations on multiple records and return a single
 | MIN() | Returns the minimum value. |
 | MAX() | Returns the maximum value. |
 
-### Practical Examples
+Practical Examples
 
 ```sql
 -- Count total employees
@@ -209,9 +208,9 @@ SELECT MIN(Salary)
 FROM Employees;
 ```
 
-## 📈 5. GROUP BY and HAVING
+📈 5. GROUP BY and HAVING
 
-### GROUP BY
+ GROUP BY
 
 GROUP BY groups records with matching values and is commonly used with aggregate functions.
 
@@ -221,7 +220,7 @@ FROM Employees
 GROUP BY Department;
 ```
 
-### HAVING
+HAVING
 
 HAVING filters grouped results based on aggregate conditions.
 
@@ -237,7 +236,7 @@ HAVING AVG(Salary) > 15000;
 - WHERE filters individual records before grouping.
 - HAVING filters grouped results after aggregation.
 
-## 🔗 6. SQL JOINS
+🔗 6. SQL JOINS
 
 SQL JOIN statements combine records from two or more tables using related columns.
 
@@ -249,7 +248,7 @@ SQL JOIN statements combine records from two or more tables using related column
 | FULL OUTER JOIN | Returns matching and non-matching records from both tables. |
 | CROSS JOIN | Returns every possible combination of records from both tables. |
 
-### INNER JOIN Example
+INNER JOIN Example
 
 ```sql
 SELECT Customers.CustomerName,
@@ -259,7 +258,7 @@ INNER JOIN Orders
 ON Customers.CustomerID = Orders.CustomerID;
 ```
 
-### LEFT JOIN Example
+LEFT JOIN Example
 
 ```sql
 SELECT Customers.CustomerName,
@@ -269,11 +268,11 @@ LEFT JOIN Orders
 ON Customers.CustomerID = Orders.CustomerID;
 ```
 
-## 🛠️ 7. Data Manipulation Language (DML)
+🛠️ 7. Data Manipulation Language (DML)
 
 DML commands are used to manipulate data stored in database tables.
 
-### INSERT
+INSERT
 
 Adds new records to a table.
 
@@ -282,7 +281,7 @@ INSERT INTO Customers (CustomerID, CustomerName, City)
 VALUES (1, 'John Smith', 'Durban');
 ```
 
-### UPDATE
+UPDATE
 
 Modifies existing records.
 
@@ -292,7 +291,7 @@ SET City = 'Johannesburg'
 WHERE CustomerID = 1;
 ```
 
-### DELETE
+DELETE
 
 Removes records from a table.
 
@@ -301,7 +300,7 @@ DELETE FROM Customers
 WHERE CustomerID = 1;
 ```
 
-## 🏗️ 8. Data Definition Language (DDL)
+🏗️ 8. Data Definition Language (DDL)
 
 DDL commands define and modify database structures.
 
@@ -312,7 +311,7 @@ DDL commands define and modify database structures.
 | DROP | Deletes a database object. |
 | TRUNCATE | Removes all records from a table. |
 
-### CREATE TABLE
+CREATE TABLE
 
 ```sql
 CREATE TABLE Employees (
@@ -323,20 +322,20 @@ CREATE TABLE Employees (
 );
 ```
 
-### ALTER TABLE
+ALTER TABLE
 
 ```sql
 ALTER TABLE Employees
 ADD Email VARCHAR(100);
 ```
 
-### DROP TABLE
+DROP TABLE
 
 ```sql
 DROP TABLE Employees;
 ```
 
-## 🔄 9. SQL Subqueries
+🔄 9. SQL Subqueries
 
 A subquery is a query nested inside another SQL query.
 
@@ -353,7 +352,7 @@ WHERE Salary > (
 
 Subqueries are useful when a query depends on the results of another query.
 
-## 🧩 10. SQL CASE Statement
+🧩 10. SQL CASE Statement
 
 The CASE statement introduces conditional logic into SQL queries.
 
@@ -368,7 +367,7 @@ SELECT EmployeeName,
 FROM Employees;
 ```
 
-## 📝 11. SQL NULL Values
+📝 11. SQL NULL Values
 
 NULL represents missing or unknown data.
 
@@ -396,7 +395,7 @@ SELECT CustomerName,
 FROM Customers;
 ```
 
-## 📚 12. SQL Query Execution Order
+📚 12. SQL Query Execution Order
 
 Although SQL queries are written in a particular order, the database logically processes their clauses in a different order.
 
@@ -413,7 +412,7 @@ The general logical execution order is:
 9. ORDER BY – Sorts the results.
 10. LIMIT / OFFSET – Restricts or skips returned records.
 
-## 💡 13. Skills Demonstrated
+💡 13. Skills Demonstrated
 
 Through this project, I demonstrate the following technical skills:
 
@@ -430,7 +429,7 @@ Through this project, I demonstrate the following technical skills:
 - Database Structure Management
 - Basic Data Analysis
 
-## 🧰 14. Tools and Technologies
+🧰 14. Tools and Technologies
 
 - **SQL:** Structured Query Language.
 - **MySQL:** Relational database management system.
@@ -440,7 +439,7 @@ Through this project, I demonstrate the following technical skills:
 
 *Note: SQL syntax can differ slightly between database management systems.*
 
-## 🚀 15. Future Improvements
+🚀 15. Future Improvements
 
 Future developments of this project may include:
 
@@ -452,7 +451,7 @@ Future developments of this project may include:
 - Query Optimisation.
 - Real-world SQL data analysis projects.
 
-## 👨‍💻 Author
+👨‍💻 Author
 
 **SQL Fundamentals – GitHub Portfolio**
 
