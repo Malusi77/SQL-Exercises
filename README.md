@@ -1,4 +1,4 @@
-SQL Basic Query Theory and Fundamentals
+##SQL Basic Query Theory and Fundamentals
  📌 Project Overview
 
 Welcome to my SQL Fundamentals project!
